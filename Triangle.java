@@ -1,19 +1,14 @@
 
-public class Triangle {
-	private int triangleBase;
-	private int triangleHeight;
+public class Triangle implements Shape{
+	private double triangleBase;
+	private double triangleHeight;
 
-	public void setBase(int width){
-		this.triangleBase = width;
+	public Triangle(double width, double height){
+		triangleBase = width;
+		triangleHeight = height;
 	}
 	
-	public void setHeight(int height){
-		this.triangleHeight = height;
-	}
-	
-	public double sumTriangle(){
-		double sum;
-		sum = (1/2) * triangleBase * triangleHeight;
-		return sum;
+	public double getArea(){
+		return (1/2) * triangleBase * triangleHeight;
 	}
 }

@@ -1,19 +1,14 @@
 
-public class Rectangle {
-	private int rectangleBase;
-	private int rectangleHeight;
+public class Rectangle implements Shape {
+	private double rectangleBase;
+	private double rectangleHeight;
 
-	public void setBase(int width){
-		this.rectangleBase = width;
+	public Rectangle(double width, double height){
+		rectangleBase = width;
+		rectangleHeight = height;
 	}
 	
-	public void setHeight(int height){
-		this.rectangleHeight = height;
-	}
-	
-	public double sumRectangle(){
-		double sum;
-		sum = rectangleBase * rectangleHeight;
-		return sum;
+	public double getArea(){
+		return rectangleBase * rectangleHeight;
 	}
 }

@@ -135,23 +135,17 @@ public class CalcGui extends JFrame {
 		btnCalculate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (comboBox.getSelectedItem() == "Square"){
-					Square areaSquare = new Square();
-					areaSquare.setLength(Integer.parseInt(txtLength.getText()));
-					lblAreaValue.setText("" + areaSquare.sumSquare());
+					Shape shape = new Square(Integer.parseInt(txtLength.getText()));
+					lblAreaValue.setText("" + shape.getArea());
 				}else if (comboBox.getSelectedItem() == "Triangle"){
-					Triangle areaTriangle = new Triangle();
-					areaTriangle.setBase(Integer.parseInt(txtWidth.getText()));
-					areaTriangle.setHeight(Integer.parseInt(txtHeight.getText()));
-					lblAreaValue.setText("" + areaTriangle.sumTriangle());
+					Shape shape = new Triangle(Integer.parseInt(txtWidth.getText()), Integer.parseInt(txtHeight.getText()));
+					lblAreaValue.setText("" + shape.getArea());
 				}else if (comboBox.getSelectedItem() == "Rectangle"){
-					Rectangle areaRectangle = new Rectangle();
-					areaRectangle.setBase(Integer.parseInt(txtWidth.getText()));
-					areaRectangle.setHeight(Integer.parseInt(txtHeight.getText()));
-					lblAreaValue.setText("" + areaRectangle.sumRectangle());
+					Shape shape = new Rectangle(Integer.parseInt(txtWidth.getText()), Integer.parseInt(txtHeight.getText()));
+					lblAreaValue.setText("" + shape.getArea());
 				}else if (comboBox.getSelectedItem() == "Circle"){
-					Circle areaCircle = new Circle();
-					areaCircle.setRadius(Integer.parseInt(txtRadius.getText()));
-					lblAreaValue.setText("" + areaCircle.sumCircle());
+					Shape shape = new Circle(Integer.parseInt(txtRadius.getText()));
+					lblAreaValue.setText("" + shape.getArea());
 				}
 			}
 		});

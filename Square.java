@@ -1,14 +1,12 @@
 
-public class Square {
-	private int squareLength;
+public class Square implements Shape {
+	private double squareLength;
 
-	public void setLength(int length){
-		this.squareLength = length;
+	public Square(double length){
+		squareLength = length;
 	}
 	
-	public double sumSquare(){
-		double sum;
-		sum = Math.pow(squareLength, 2);
-		return sum;
+	public double getArea(){
+		return Math.pow(squareLength, 2);
 	}
 }
